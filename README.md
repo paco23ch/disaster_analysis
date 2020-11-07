@@ -6,9 +6,9 @@ This is my Udacity project for Disaster relief message analysis.  It's main obje
 
 The project contains three major components to cover the end-to-end work:
 
-  - Data Ingestion & Transformation: The first module will take care of loading the source messages and classifications, as well as do come cleanup and restructuring of the data, and then finally writing to a database for further use.  The code & data files are stored in the `data` directory.
-  - Machine Learning Training Model: The second module will use the data ingested and transformed in the first step to train and improve a module. The code & data files are stored in the `models` directory.
-  - Web application: The third module is a web application that will allow users to send any message and get it classified in any of the categories previously defined.  The code is stored in the `app` directory.
+  - **Data Ingestion & Transformation**: The first module will take care of loading the source messages and classifications, as well as do come cleanup and restructuring of the data, and then finally writing to a database for further use.  The code & data files are stored in the `data` directory.
+  - **Machine Learning Training Model**: The second module will use the data ingested and transformed in the first step to train and improve a module. The code & data files are stored in the `models` directory.
+  - **Web application**: The third module is a web application that will allow users to send any message and get it classified in any of the categories previously defined.  The code is stored in the `app` directory.
   
 ## Project Files
 
