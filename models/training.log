@@ -293,3 +293,295 @@ avg / total       0.93      0.95      0.93      5244
 avg / total       0.86      0.87      0.86      5244
 
 2020-11-07 18:14:39,227 - INFO - Improving model ...
+2020-11-07 20:48:12,939 - INFO - Evaluating mode ... 
+2020-11-07 20:48:20,158 - INFO - *** 1. Classification report for related
+2020-11-07 20:48:20,161 - INFO -              precision    recall  f1-score   support
+
+          0       0.63      0.27      0.38      1226
+          1       0.80      0.95      0.87      3980
+          2       0.53      0.21      0.30        38
+
+avg / total       0.76      0.79      0.75      5244
+
+2020-11-07 20:48:20,166 - INFO - *** 2. Classification report for request
+2020-11-07 20:48:20,169 - INFO -              precision    recall  f1-score   support
+
+          0       0.92      0.97      0.94      4323
+          1       0.80      0.58      0.67       921
+
+avg / total       0.90      0.90      0.90      5244
+
+2020-11-07 20:48:20,173 - INFO - *** 3. Classification report for offer
+2020-11-07 20:48:20,175 - INFO -              precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      5220
+          1       0.00      0.00      0.00        24
+
+avg / total       0.99      0.99      0.99      5244
+
+2020-11-07 20:48:20,179 - INFO - *** 4. Classification report for aid_related
+2020-11-07 20:48:20,182 - INFO -              precision    recall  f1-score   support
+
+          0       0.75      0.87      0.81      3002
+          1       0.78      0.62      0.69      2242
+
+avg / total       0.76      0.76      0.76      5244
+
+2020-11-07 20:48:20,186 - INFO - *** 5. Classification report for medical_help
+2020-11-07 20:48:20,189 - INFO -              precision    recall  f1-score   support
+
+          0       0.93      0.99      0.96      4787
+          1       0.63      0.25      0.36       457
+
+avg / total       0.91      0.92      0.91      5244
+
+2020-11-07 20:48:20,194 - INFO - *** 6. Classification report for medical_products
+2020-11-07 20:48:20,196 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.99      0.98      4965
+          1       0.66      0.31      0.42       279
+
+avg / total       0.95      0.95      0.95      5244
+
+2020-11-07 20:48:20,200 - INFO - *** 7. Classification report for search_and_rescue
+2020-11-07 20:48:20,203 - INFO -              precision    recall  f1-score   support
+
+          0       0.97      1.00      0.99      5093
+          1       0.53      0.11      0.19       151
+
+avg / total       0.96      0.97      0.96      5244
+
+2020-11-07 20:48:20,207 - INFO - *** 8. Classification report for security
+2020-11-07 20:48:20,209 - INFO -              precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99      5137
+          1       0.36      0.05      0.08       107
+
+avg / total       0.97      0.98      0.97      5244
+
+2020-11-07 20:48:20,214 - INFO - *** 9. Classification report for military
+2020-11-07 20:48:20,216 - INFO -              precision    recall  f1-score   support
+
+          0       0.97      0.99      0.98      5054
+          1       0.61      0.32      0.42       190
+
+avg / total       0.96      0.97      0.96      5244
+
+2020-11-07 20:48:20,220 - INFO - *** 10. Classification report for child_alone
+2020-11-07 20:48:20,223 - INFO -              precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      5244
+
+avg / total       1.00      1.00      1.00      5244
+
+2020-11-07 20:48:20,226 - INFO - *** 11. Classification report for water
+2020-11-07 20:48:20,229 - INFO -              precision    recall  f1-score   support
+
+          0       0.97      0.99      0.98      4878
+          1       0.77      0.66      0.71       366
+
+avg / total       0.96      0.96      0.96      5244
+
+2020-11-07 20:48:20,233 - INFO - *** 12. Classification report for food
+2020-11-07 20:48:20,235 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.98      0.97      4634
+          1       0.82      0.69      0.75       610
+
+avg / total       0.94      0.95      0.94      5244
+
+2020-11-07 20:48:20,239 - INFO - *** 13. Classification report for shelter
+2020-11-07 20:48:20,242 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.98      0.97      4794
+          1       0.76      0.59      0.66       450
+
+avg / total       0.94      0.95      0.95      5244
+
+2020-11-07 20:48:20,246 - INFO - *** 14. Classification report for clothing
+2020-11-07 20:48:20,249 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5164
+          1       0.69      0.36      0.48        80
+
+avg / total       0.99      0.99      0.99      5244
+
+2020-11-07 20:48:20,253 - INFO - *** 15. Classification report for money
+2020-11-07 20:48:20,255 - INFO -              precision    recall  f1-score   support
+
+          0       0.98      0.99      0.99      5116
+          1       0.58      0.30      0.40       128
+
+avg / total       0.97      0.98      0.97      5244
+
+2020-11-07 20:48:20,259 - INFO - *** 16. Classification report for missing_people
+2020-11-07 20:48:20,262 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5184
+          1       0.56      0.15      0.24        60
+
+avg / total       0.99      0.99      0.99      5244
+
+2020-11-07 20:48:20,266 - INFO - *** 17. Classification report for refugees
+2020-11-07 20:48:20,268 - INFO -              precision    recall  f1-score   support
+
+          0       0.97      0.99      0.98      5056
+          1       0.57      0.23      0.33       188
+
+avg / total       0.96      0.97      0.96      5244
+
+2020-11-07 20:48:20,272 - INFO - *** 18. Classification report for death
+2020-11-07 20:48:20,275 - INFO -              precision    recall  f1-score   support
+
+          0       0.97      0.99      0.98      4990
+          1       0.73      0.41      0.53       254
+
+avg / total       0.96      0.96      0.96      5244
+
+2020-11-07 20:48:20,278 - INFO - *** 19. Classification report for other_aid
+2020-11-07 20:48:20,281 - INFO -              precision    recall  f1-score   support
+
+          0       0.88      0.97      0.93      4553
+          1       0.46      0.14      0.22       691
+
+avg / total       0.83      0.87      0.83      5244
+
+2020-11-07 20:48:20,285 - INFO - *** 20. Classification report for infrastructure_related
+2020-11-07 20:48:20,288 - INFO -              precision    recall  f1-score   support
+
+          0       0.94      0.99      0.96      4914
+          1       0.36      0.09      0.15       330
+
+avg / total       0.91      0.93      0.91      5244
+
+2020-11-07 20:48:20,292 - INFO - *** 21. Classification report for transport
+2020-11-07 20:48:20,294 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      1.00      0.98      4989
+          1       0.71      0.22      0.33       255
+
+avg / total       0.95      0.96      0.95      5244
+
+2020-11-07 20:48:20,298 - INFO - *** 22. Classification report for buildings
+2020-11-07 20:48:20,301 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.99      0.98      4953
+          1       0.68      0.36      0.47       291
+
+avg / total       0.95      0.95      0.95      5244
+
+2020-11-07 20:48:20,305 - INFO - *** 23. Classification report for electricity
+2020-11-07 20:48:20,307 - INFO -              precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99      5143
+          1       0.46      0.21      0.29       101
+
+avg / total       0.97      0.98      0.98      5244
+
+2020-11-07 20:48:20,311 - INFO - *** 24. Classification report for tools
+2020-11-07 20:48:20,314 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00      5211
+          1       0.20      0.06      0.09        33
+
+avg / total       0.99      0.99      0.99      5244
+
+2020-11-07 20:48:20,317 - INFO - *** 25. Classification report for hospitals
+2020-11-07 20:48:20,320 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5191
+          1       0.26      0.09      0.14        53
+
+avg / total       0.98      0.99      0.99      5244
+
+2020-11-07 20:48:20,324 - INFO - *** 26. Classification report for shops
+2020-11-07 20:48:20,326 - INFO -              precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00      5227
+          1       0.00      0.00      0.00        17
+
+avg / total       0.99      1.00      0.99      5244
+
+2020-11-07 20:48:20,330 - INFO - *** 27. Classification report for aid_centers
+2020-11-07 20:48:20,333 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5191
+          1       0.29      0.11      0.16        53
+
+avg / total       0.98      0.99      0.99      5244
+
+2020-11-07 20:48:20,337 - INFO - *** 28. Classification report for other_infrastructure
+2020-11-07 20:48:20,340 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.99      0.98      5005
+          1       0.38      0.08      0.14       239
+
+avg / total       0.93      0.95      0.94      5244
+
+2020-11-07 20:48:20,344 - INFO - *** 29. Classification report for weather_related
+2020-11-07 20:48:20,347 - INFO -              precision    recall  f1-score   support
+
+          0       0.88      0.95      0.92      3756
+          1       0.86      0.68      0.76      1488
+
+avg / total       0.87      0.88      0.87      5244
+
+2020-11-07 20:48:20,351 - INFO - *** 30. Classification report for floods
+2020-11-07 20:48:20,353 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.99      0.97      4771
+          1       0.89      0.53      0.66       473
+
+avg / total       0.95      0.95      0.95      5244
+
+2020-11-07 20:48:20,357 - INFO - *** 31. Classification report for storm
+2020-11-07 20:48:20,360 - INFO -              precision    recall  f1-score   support
+
+          0       0.95      0.98      0.97      4755
+          1       0.74      0.55      0.63       489
+
+avg / total       0.93      0.94      0.94      5244
+
+2020-11-07 20:48:20,364 - INFO - *** 32. Classification report for fire
+2020-11-07 20:48:20,366 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5188
+          1       0.39      0.21      0.28        56
+
+avg / total       0.99      0.99      0.99      5244
+
+2020-11-07 20:48:20,370 - INFO - *** 33. Classification report for earthquake
+2020-11-07 20:48:20,373 - INFO -              precision    recall  f1-score   support
+
+          0       0.98      0.99      0.98      4753
+          1       0.89      0.79      0.84       491
+
+avg / total       0.97      0.97      0.97      5244
+
+2020-11-07 20:48:20,377 - INFO - *** 34. Classification report for cold
+2020-11-07 20:48:20,379 - INFO -              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99      5132
+          1       0.75      0.39      0.51       112
+
+avg / total       0.98      0.98      0.98      5244
+
+2020-11-07 20:48:20,383 - INFO - *** 35. Classification report for other_weather
+2020-11-07 20:48:20,386 - INFO -              precision    recall  f1-score   support
+
+          0       0.96      0.99      0.97      4980
+          1       0.53      0.12      0.20       264
+
+avg / total       0.93      0.95      0.94      5244
+
+2020-11-07 20:48:20,389 - INFO - *** 36. Classification report for direct_report
+2020-11-07 20:48:20,392 - INFO -              precision    recall  f1-score   support
+
+          0       0.89      0.96      0.92      4217
+          1       0.75      0.53      0.62      1027
+
+avg / total       0.86      0.87      0.86      5244
+
+2020-11-07 20:48:20,396 - INFO - Saving model...
+    MODEL: models/classifier.pkl
+2020-11-07 20:48:20,653 - INFO - Trained model saved!

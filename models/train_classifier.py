@@ -23,6 +23,16 @@ parameters = {'multi__estimator__learning_rate' : [0.9, 1],
               'multi__estimator__n_estimators' : [100, 200, 300]}
 
 def load_data(database_filepath):
+    """Load the input data stored in the database.
+
+    Args:
+    database_filepath - Database file
+
+    Returns:
+    X - Fact columns for the model
+    Y - Label columns for the model
+    Y.columns - Label column names after splitting the input data into X & Y
+    """
     x_columns = ['id','message','original','genre']
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('ClassifiedMessages',engine)
@@ -32,6 +42,14 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    """Convert the input into tokens for the machine learning algorithms
+
+    Args:
+    text - Text to be converted into tokens
+
+    Returns:
+    clean_tokens - List of tokens once transformed
+    """
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
     
@@ -44,6 +62,14 @@ def tokenize(text):
 
 
 def build_model():
+    """Load the input data stored in the database.
+
+    Args:
+    none
+
+    Returns:
+    pipeline - The newly created pipeline containing all transformation steps and the output classifier.
+    """
     pipeline = Pipeline([('vect', CountVectorizer(tokenizer=tokenize)),
                      ('tfidf', TfidfTransformer()),
                      ('multi', MultiOutputClassifier(estimator=AdaBoostClassifier()))])
@@ -51,12 +77,35 @@ def build_model():
     return(pipeline)
 
 def tune_model(model, X_train, y_train, parameters):
+    """Run a GridSearchCV on a given model
+
+    Args:
+    model - Previously created model to be tuned
+    X_train - Input data for running the GridSearch on
+    Y_train - Input labels for running the GridSearch on
+    parameters - to be used in GridSearch
+    
+
+    Returns:
+    best_Estimator - after nunning the GridSearch algorith, the best model it could come up with
+    """
     cv = GridSearchCV(model,param_grid=parameters, verbose=25)
     cv.fit(X_train, y_train)
 
     return(cv.best_estimator_)
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    """Print the metrics for each of the categories using the test data
+
+    Args:
+    model - to be evaluated
+    X - Fact columns for the model (test set)
+    Y - Label columns for the model (test set)
+    category_names - Label column names after splitting the input data into X & Y
+
+    Returns:
+    None
+    """
     y_pred = model.predict(X_test)
 
     for i,col in enumerate(category_names):
@@ -68,10 +117,29 @@ def evaluate_model(model, X_test, Y_test, category_names):
     return
 
 def save_model(model, model_filepath):
+    """Save model to a file
+
+    Args:
+    model - to be saved
+    model_filepath - File where the model is to be saved
+    
+    Returns:
+    None
+    """    
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
 def main():
+    """Main function to be called from command line
+
+    Args:
+    database_filepath - database file where test and training data reside
+    model_filepath - output model file to be created
+    log_file - log file used for writing all actions
+    
+    Returns:
+    None
+    """
     if len(sys.argv) == 4:
         database_filepath, model_filepath, log_file = sys.argv[1:]
 

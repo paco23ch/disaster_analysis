@@ -4,6 +4,15 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
+    """Load the CSV files from disk
+
+    Args:
+    messages_filepath - File that contains the text messages used for training & test
+    categories_filepath - File that contains the classifications of the above messages
+    
+    Returns:
+    Dataframe with all the messages & categories merged together
+    """
     # load messages dataset
     messages = pd.read_csv(messages_filepath)
 
@@ -17,6 +26,14 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    """Cleanup the data, splitting categories into columns, removing duplicates
+
+    Args:
+    Dataframe with the messages and classifications
+    
+    Returns:
+    Clean data frame
+    """
     # create a dataframe of the 36 individual category columns
     categories = df.categories.str.split(';',expand=True)
 
@@ -51,11 +68,30 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    """Save the data in memory to a sqlite database
+
+    Args:
+    df - Dataframe to be written to the database
+    database_filename - database file where test and training data will reside
+    
+    Returns:
+    None
+    """
     engine = create_engine('sqlite:///' + database_filename)
     df.to_sql('ClassifiedMessages', engine, index=False)  
 
 
 def main():
+    """Main function to be called from command line
+
+    Args:
+    messages_filepath - input message csv file
+    categories_filepath -input categories csv file
+    database_filepath - database file where test and training data reside
+    
+    Returns:
+    None
+    """
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
