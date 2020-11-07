@@ -12,7 +12,9 @@ The project contains three major components to cover the end-to-end work:
   
 ## Project Files
 
-- `README.md`
+- `README.md`. Overview and instructions to run the application modules
+- `ETL Pipeline Preparation.html` & `ETL Pipeline Preparation.ipynb`.  ETL pipepline workbook, in order to prepare the `process_data.py` file.
+- `ML Pipeline Preparation.html` & `ML Pipeline Preparation.ipynb`.  ML pipeline workbook, in order to prepare the `train_classifier.py` file
 - `app/`  Web application.  
   - `run.py`. Main file to run the Web Application.
   - `templates` 
