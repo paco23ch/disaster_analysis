@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 
-This is my Udacity project for Disaster relief message analysis.  It's main objective is to take a set of pre-classified messages and be able to predict come categories for disaster response teams to take action on future messages.
+This is my Udacity project for Disaster relief message analysis.  It's main objective is to take a set of pre-classified messages and provide an infrastructure to predict categories on future messages for disaster response teams to take action on.
 
 ## Project Structure
 
