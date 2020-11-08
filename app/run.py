@@ -43,6 +43,20 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    message_categories = df
+    
+    df1 = df.drop(['id','message','original'],axis=1)
+    df1 = df1.groupby('genre',as_index=False).sum()
+    df1 = pd.melt(df1, id_vars='genre',var_name='type',value_name='total')
+    max_value = max(df1['total'])
+    direct = df1.query('genre == "direct"')[['type','total']].sort_values('type', ascending=False)
+    news = df1.query('genre == "news"')[['type','total']].sort_values('type', ascending=False)
+    social = df1.query('genre == "social"')[['type','total']].sort_values('type', ascending=False)
+    
+    df2 = df.drop(['id','message','original','genre'],axis=1)
+    df2 = df2.mean().sort_values()
+    
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,7 +77,61 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
+        },
+        {
+            'data': [
+                Bar(
+                    y=direct['type'],
+                    x=direct['total'],
+                    name='Direct',
+                    orientation='h'
+                ),
+                Bar(
+                    y=news['type'],
+                    x=news['total'],
+                    name='News',
+                    orientation='h'
+                ),
+                Bar(
+                    y=social['type'],
+                    x=social['total'],
+                    name='Social',
+                    orientation='h'
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of messages by category',
+                'xaxis': {
+                    'title': "Count",
+                    'range': [0,max_value]
+                },
+                'autosize' : False,
+                'width' : 1200,
+                'height' : 1500
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    y=df2.index,
+                    x=df2.values,
+                    name='Probability',
+                    orientation='h'
+                )
+            ],
+
+            'layout': {
+                'title': 'Probability of each category',
+                'xaxis': {
+                    'title': "Probability",
+                },
+                'autosize' : False,
+                'width' : 1200,
+                'height' : 1500
+            }
+        },
+        
     ]
     
     # encode plotly graphs in JSON
